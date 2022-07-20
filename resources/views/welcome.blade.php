@@ -14,6 +14,14 @@
             url('{{URL::asset("/fonts/helveticaneue-roman-webfont.woff")}}') format('woff');
             font-weight: normal;
             font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'volvobroadregular';
+            src: url('{{URL::asset("/fonts/volvobroad-webfont.woff2")}}') format('woff2'),
+            url('{{URL::asset("/fonts/volvobroad-webfont.woff")}}') format('woff');
+            font-weight: normal;
+            font-style: normal;
 
         }
 
@@ -23,14 +31,17 @@
             -moz-background-size: cover;
             -o-background-size: cover;
             background-size: cover;
+            font-family: 'helvetica_neue55_roman';
+
         }
 
         h1{
-            font-family: 'helvetica_neue55_roman';
-            font-size: 85px;
+            font-family: 'volvobroadregular';
+            font-size: 130px;
             font-weight: bold;
             text-align: center;
             color: #ffffff;
+            margin-bottom: 0px;
         }
 
         .form{

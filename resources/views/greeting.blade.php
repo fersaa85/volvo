@@ -23,6 +23,7 @@
             -moz-background-size: cover;
             -o-background-size: cover;
             background-size: cover;
+            font-family: 'helvetica_neue55_roman';
         }
 
         h1{
