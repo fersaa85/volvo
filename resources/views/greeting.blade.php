@@ -36,8 +36,8 @@
         .success{
             width: 450px;
             border-radius: 25px;
-            background: #2a507e;
             border-color: #2a507e;
+            background-color: rgba(42, 80, 126, 0.8);
             padding: 40px;
             color: #ffffff;
         }

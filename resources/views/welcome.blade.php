@@ -36,7 +36,7 @@
         .form{
             width: 450px;
             border-radius: 25px;
-            background: #ffffff;
+            background-color: rgba(255, 255, 255, 0.8);
             padding: 40px;
         }
 
@@ -82,10 +82,10 @@
             <form class="form" method="POST" action="{{ url('/signup') }}">
                 <input name="_token" type="hidden" value="{{ csrf_token() }}"/>
                 <div class="form-group">
-                    <input type="text" name="name" class="form-control" id="exampleInputPassword1" placeholder="Nombre:">
+                    <input type="text" name="name" class="form-control" id="exampleInputPassword1" placeholder="NOMBRE:">
                 </div><br/>
                 <div class="form-group">
-                    <input type="text" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email:">
+                    <input type="text" name="business" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="EMPRESA:">
                 </div><br/>
                 <div class="text-right">
                     <button type="submit" class="btn btn-primary btn-blue">Enviar</button>

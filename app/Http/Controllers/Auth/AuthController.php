@@ -20,7 +20,8 @@ class AuthController extends Controller
 
         User::create([
             'name' => $request->name,
-            'email' => $request->email,
+            'business' => $request->business,
+            'email' => 'email-'.uniqid().'@email.com',
             'password' => '',
         ]);
 
