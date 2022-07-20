@@ -56,6 +56,15 @@
             border-color: #2a507e;
         }
 
+        .alert-success-blue{
+            background-color: #2a507e;
+            border-color: #2a507e;
+        }
+
+        .color-white{
+            color: #ffffff;
+        }
+
     </style>
     <title>Volvo</title>
 </head>
@@ -83,6 +92,7 @@
 
     <div class="d-flex align-items-center justify-content-center" style="height: 350px">
         <div class="p-2 bd-highlight col-example">
+
             @if ($errors->any())
                 <div class="alert alert-danger" role="alert">
                     @foreach ($errors->all() as $error)
