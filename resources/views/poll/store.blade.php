@@ -260,8 +260,8 @@
 
                 </fieldset>
 
-                <div class="text-right">
-                    <button type="submit" class="btn btn-primary btn-blue">Enviar</button>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary btn-blue" style="width: 150px">Enviar</button>
 
                 </div>
 

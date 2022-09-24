@@ -6,6 +6,13 @@
         <h1 class="color-red text-uppercase text-center mb-5" style="font-size: 77px;"><b>El reto Del arroz americano  2022</b></h1>
     </a>
 
+    <div class="text-center">
+        <a href="{{ route('encuesta') }}" class="btn btn-primary btn-blue mb-5">
+            Participar en la encuesta
+        </a>
+    </div>
+
+
 @stop
 
 @section('footer')
