@@ -22,11 +22,11 @@ Route::post('signup',  [AuthController::class, 'signUp']);
 */
 
 Route::get('/', function () {
-    return view('poll.home');
+    return view('welcome.home');
 });
 Route::get('/encuesta', function () {
     return view('poll.store');
 })->name('encuesta');
-Route::post('poll',  PollController::class);
+Route::post('/poll',  PollController::class);
 
 
