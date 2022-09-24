@@ -14,13 +14,13 @@ use App\Http\Controllers\Poll\PollController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-/*
+
 Route::get('/', function () {
     return view('welcome');
 });
 Route::post('signup',  [AuthController::class, 'signUp']);
-*/
 
+/*
 Route::get('/', function () {
     return view('poll.home');
 });
@@ -29,4 +29,4 @@ Route::get('/encuesta', function () {
 })->name('encuesta');
 Route::post('/poll',  [PollController::class, 'store']);
 
-
+*/
