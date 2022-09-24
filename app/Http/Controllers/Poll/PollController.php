@@ -12,7 +12,7 @@ class PollController extends Controller
     /**
      * Registro de usuario
      */
-    public function __invoke(PollStoreRequest $request)
+    public function store(PollStoreRequest $request)
     {
         Poll::create([
             'name' => $request->get('name', ''),
