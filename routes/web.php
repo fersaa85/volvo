@@ -24,9 +24,9 @@ Route::post('signup',  [AuthController::class, 'signUp']);
 Route::get('/', function () {
     return view('poll.home');
 });
-Route::get('encuesta', function () {
+Route::get('/encuesta', function () {
     return view('poll.store');
-});
+})->name('encuesta');
 Route::post('store',  [PollController::class, 'store']);
 
 
