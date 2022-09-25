@@ -26,7 +26,7 @@ Route::get('/', function () {
 });
 Route::get('/encuesta', function () {
     return view('poll.store');
-})->name('encuesta');
-Route::post('poll',  [PollController::class, 'store']);
+});
+Route::post('store',  [PollController::class, 'store']);
 
 
