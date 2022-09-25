@@ -7,7 +7,7 @@
     <div class="container mb-5">
 
 
-            <form class="form" method="POST" action="{{ url('/poll') }}">
+            <form class="form" method="POST" action="{{ url('/store') }}">
                 <input name="_token" type="hidden" value="{{ csrf_token() }}"/>
 
                 <fieldset class="scheduler-border">
