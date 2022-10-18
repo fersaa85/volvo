@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\Poll\PollController;
-
+use App\Http\Controllers\Poll\DownloadController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,4 +29,5 @@ Route::get('/encuesta', function () {
 })->name('encuesta');
 Route::post('store',  [PollController::class, 'store']);
 
+Route::get('/download', DownloadController::class )->name('download');
 
