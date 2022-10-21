@@ -261,7 +261,7 @@
                 </fieldset>
 
                 <div class="text-center">
-                    <button type="submit" class="btn btn-primary btn-blue" style="width: 150px">Enviar</button>
+                    <button type="submit" class="btn btn-primary btn-blue" style="width: 150px" >Enviar</button>
 
                 </div>
 
@@ -274,6 +274,16 @@
 @section('script')
 <script>
     $(document).ready(function(){
+
+        $( "form" ).submit(function( event ) {
+            $("button[type=submit]").attr("disabled", true);
+        });
+        /*$("button[type=submit]").click(function(e){
+            //e.preventDefault();
+            $("button[type=submit]").attr("disabled", true);
+            $( "form" ).submit();
+        });
+        */
 
         $(".originRiceMexico").click(function(e){
             if( $('input[name=originRiceMexico]:checked').val() === 'no'){
