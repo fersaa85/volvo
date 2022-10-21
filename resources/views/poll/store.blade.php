@@ -275,15 +275,9 @@
 <script>
     $(document).ready(function(){
 
-        $( "form" ).submit(function( event ) {
-            $("button[type=submit]").attr("disabled", true);
+        $('form').submit(function() {
+            $(this).find("button[type='submit']").prop('disabled',true);
         });
-        /*$("button[type=submit]").click(function(e){
-            //e.preventDefault();
-            $("button[type=submit]").attr("disabled", true);
-            $( "form" ).submit();
-        });
-        */
 
         $(".originRiceMexico").click(function(e){
             if( $('input[name=originRiceMexico]:checked').val() === 'no'){
