@@ -20,9 +20,9 @@ use App\Http\Controllers\Electric\ElectricController;
  * volvo
  */
 Route::get('/', function () {
-    return view('welcome');
+    return view('electric.index');
 });
-Route::post('signup',  [AuthController::class, 'signUp']);
+Route::post('signup',  [ElectricController::class, 'signUp']);
 
 
 
