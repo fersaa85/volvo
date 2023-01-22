@@ -34,6 +34,7 @@ Route::get('/', function () {
     return view('electric.index');
 });
 Route::post('signup',  [ElectricController::class, 'signUp']);
+Route::get('signup2',  [ElectricController::class, 'signUp']);
 
 
 
