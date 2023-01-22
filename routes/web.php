@@ -38,6 +38,8 @@ Route::get('signup2',  [ElectricController::class, 'signUp']);
 
 
 
+
+
 /**
  * reto del arroz
 
