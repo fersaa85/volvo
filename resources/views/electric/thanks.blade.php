@@ -53,6 +53,8 @@
             color: #2a507e;
         }
 
+        a:link, a:visited, a:hover,  a:active { text-decoration: none; }
+
         @media (orientation: landscape) {
             .text-align{
                 text-align: center;
@@ -82,16 +84,18 @@
 
 <div class="p-3 mb-4">
 
-    <div class="d-flex align-items-center justify-content-center" style="height: 350px">
-        <div class="p-2 bd-highlight col-example">
-            <div class="success text-center color-text">
-                <h2 class="text-uppercase">¡Bienvenido <br />{{ $name }}!</h2>
-                <br><br/>
-                <h4>TU REGISTRO HA SIDO EXITOSO</h4>
+    <a href="https://wedrivetogether.mx/">
+        <div class="d-flex align-items-center justify-content-center" style="height: 350px">
+            <div class="p-2 bd-highlight col-example">
+                <div class="success text-center color-text">
+                    <h2 class="text-uppercase">¡Bienvenido <br />{{ $name }}!</h2>
+                    <br><br/>
+                    <h4>TU REGISTRO HA SIDO EXITOSO</h4>
+                </div>
             </div>
-        </div>
 
-    </div>
+        </div>
+    </a>
 
 </div>
 
