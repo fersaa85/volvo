@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\Poll;
 
-use App\Http\Requests\PollStoreRequest;
 use App\Models\Poll;
 use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\DB;
 
 
 class DownloadController extends Controller
@@ -42,7 +42,7 @@ class DownloadController extends Controller
             'Creado',
         );
 
-        $data = Poll::get();
+        $data = Poll::where( DB::raw('YEAR(created_at)'), '=', '2023' )->get();
 
         $callback = function () use ($data, $columns) {
             $file = fopen('php://output', 'w');
