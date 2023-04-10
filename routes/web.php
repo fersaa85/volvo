@@ -41,17 +41,17 @@ Route::post('signup',  [ElectricController::class, 'signUp']);
 
 /**
  * reto del arroz
-
-Route::get('/', function () {
-    return view('poll.home');
-});
-Route::get('/encuesta', function () {
-    return view('poll.store');
-})->name('encuesta');
-Route::post('store',  [PollController::class, 'store']);
-
-Route::get('/download', DownloadController::class )->name('download');
-
- *
  */
+Route::prefix('arroz')->group(function () {
+    Route::get('/', function () {
+        return view('poll.home');
+    });
+    Route::get('/encuesta', function () {
+        return view('poll.store');
+    })->name('encuesta');
+    Route::post('store',  [PollController::class, 'store'])->name('arroz.store');
+
+    Route::get('/download', DownloadController::class )->name('download');
+
+});
 
