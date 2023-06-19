@@ -45,7 +45,7 @@ Route::post('signup',  [ElectricController::class, 'signUp']);
 Route::prefix('arroz')->group(function () {
     Route::get('/', function () {
         return view('poll.home');
-    });
+    })->name('arroz');
     Route::get('/encuesta', function () {
         return view('poll.store');
     })->name('encuesta');
