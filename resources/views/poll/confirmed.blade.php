@@ -23,31 +23,28 @@
 @stop
 
 @section('footer')
-    <div class="fixed-bottom">
-        <div class="container">
-            <div class="row">
-                <div class="col-6">
-                    <div class="row">
-                        <div class="col-4">
-                            <img src="{{URL::asset('/images/poll/Logo-SOS-200x200px.png')}}"  class="img-fluid">
-                        </div>
-                        <div class="col-4">
-                            <img src="{{URL::asset('/images/poll/Logo-La-Merced-200x200px.png')}}" class="img-fluid">
-                        </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <div class="row">
+                    <div class="col-4">
+                        <img data-src="{{URL::asset('/images/poll/Logo-SOS-200x200px.png')}}"  loading="lazy" class="img-fluid lazyload">
+                    </div>
+                    <div class="col-4">
+                        <img data-src="{{URL::asset('/images/poll/Logo-La-Merced-200x200px.png')}}"  loading="lazy" class="img-fluid lazyload">
+                    </div>
 
-                        <div class="col-4">
-                            <img src="{{URL::asset('/images/poll/Logo-Vereda-200x200px.png')}}" class="img-fluid">
-                        </div>
+                    <div class="col-4">
+                        <img data-src="{{URL::asset('/images/poll/Logo-Vereda-200x200px.png')}}" loading="lazy" class="img-fluid lazyload">
                     </div>
                 </div>
-                <div class="col-6 text-right" >
-                    <img src="{{URL::asset('/images/poll/Logo-Arroz-Americano-Completo-600x200px.png')}}" class="img-fluid">
-                </div>
+            </div>
+            <div class="col-6 text-right" >
+                <img data-src="{{URL::asset('/images/poll/Logo-Arroz-Americano-Completo-600x200px.png')}}"  loading="lazy" class="img-fluid lazyload">
             </div>
         </div>
     </div>
-@stop
-
+@show
 
 @section('script')
 <script>
@@ -58,5 +55,21 @@
         window.location.href = "https://wedrivetogether.mx/arroz";
 
     }, 3000);
+
+    if ("loading" in HTMLImageElement.prototype) {
+        // Si el navegador soporta lazy-load, tomamos todas las imágenes que tienen la clase
+        // `lazyload`, obtenemos el valor de su atributo `data-src` y lo inyectamos en el `src`.
+        const images = document.querySelectorAll("img.lazyload");
+        images.forEach((img) => {
+            img.src = img.dataset.src;
+        });
+    } else {
+        // Importamos dinámicamente la libreria `lazysizes`
+        let script = document.createElement("script");
+        script.async = true;
+        script.src =
+            "https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.0/lazysizes.min.js";
+        document.body.appendChild(script);
+    }
  </script>
 @stop

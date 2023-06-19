@@ -4,23 +4,6 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
     <!-- Bootstrap CSS -->
@@ -106,19 +89,19 @@
             <div class="col-6">
                 <div class="row">
                     <div class="col-4">
-                        <img src="{{URL::asset('/images/poll/Logo-SOS-200x200px.png')}}"  class="img-fluid">
+                        <img data-src="{{URL::asset('/images/poll/Logo-SOS-200x200px.png')}}"  loading="lazy" class="img-fluid lazyload">
                     </div>
                     <div class="col-4">
-                        <img src="{{URL::asset('/images/poll/Logo-La-Merced-200x200px.png')}}" class="img-fluid">
+                        <img data-src="{{URL::asset('/images/poll/Logo-La-Merced-200x200px.png')}}"  loading="lazy" class="img-fluid lazyload">
                     </div>
 
                     <div class="col-4">
-                        <img src="{{URL::asset('/images/poll/Logo-Vereda-200x200px.png')}}" class="img-fluid">
+                        <img data-src="{{URL::asset('/images/poll/Logo-Vereda-200x200px.png')}}" loading="lazy" class="img-fluid lazyload">
                     </div>
                 </div>
             </div>
             <div class="col-6 text-right" >
-                <img src="{{URL::asset('/images/poll/Logo-Arroz-Americano-Completo-600x200px.png')}}" class="img-fluid">
+                <img data-src="{{URL::asset('/images/poll/Logo-Arroz-Americano-Completo-600x200px.png')}}"   loading="lazy" class="img-fluid lazyload">
             </div>
         </div>
     </div>
@@ -131,9 +114,26 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
 @section('script')
-@show
+    <script>
+        if ("loading" in HTMLImageElement.prototype) {
+            // Si el navegador soporta lazy-load, tomamos todas las imágenes que tienen la clase
+            // `lazyload`, obtenemos el valor de su atributo `data-src` y lo inyectamos en el `src`.
+            const images = document.querySelectorAll("img.lazyload");
+            images.forEach((img) => {
+                img.src = img.dataset.src;
+            });
+        } else {
+            // Importamos dinámicamente la libreria `lazysizes`
+            let script = document.createElement("script");
+            script.async = true;
+            script.src =
+                "https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.0/lazysizes.min.js";
+            document.body.appendChild(script);
+        }
+    </script>
+
+@stop
 
 </body>
 </html>
