@@ -10,7 +10,7 @@ use Laravel\Sanctum\HasApiTokens;
 class UserElectric extends Authenticatable
 {
 
-    public $table = 'users_electric';
+    public $table = 'user_electrics';
     /**
      * The attributes that are mass assignable.
      *
