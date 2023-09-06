@@ -27,7 +27,7 @@
         }
 
         body {
-            background: url({{URL::asset('/images/background.png')}}) no-repeat center center fixed;
+            background: url({{URL::asset('/images/web-registro-back-1654x930px.jpg')}}) no-repeat center center fixed;
             -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;
