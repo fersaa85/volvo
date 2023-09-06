@@ -19,7 +19,7 @@
         }
 
         body {
-            background: url({{URL::asset('/images/web-registro-back-1654x930px.jpg')}}) no-repeat center center fixed;
+            background: url({{URL::asset('/images/FHD-fondo.png')}}) no-repeat center center fixed;
             -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;
@@ -50,7 +50,7 @@
             font-weight: lighter;
         }
         .color-text{
-            color: #2a507e;
+            color: #000000;
         }
 
         a:link, a:visited, a:hover,  a:active { text-decoration: none; }
@@ -75,20 +75,27 @@
     <div class="row">
         <div class="col-12 text-align">
             <a href="{{ url('/') }}">
-                <img src="{{URL::asset('/images/logoVolvo.png')}}">
+                <img width="70%" src="{{URL::asset('/images/thumbnail_haval-h6-hev.png')}}">
             </a>
         </div>
-
     </div>
 </div>
-
+<div class="container mt-5">
+    <div class="row">
+        <!--<div class="col">
+            <<h1 class="volvobroadregular" style="font-size: 120px;">the electric era</h1>
+            <h3 style="font-size: 60px; font-weight: lighter;">is now</h3>
+        </div>
+        -->
+    </div>
+</div>
 <div class="p-3 mb-4">
 
     <a href="https://wedrivetogether.mx/">
         <div class="d-flex align-items-center justify-content-center" style="height: 350px">
             <div class="p-2 bd-highlight col-example">
                 <div class="success text-center color-text">
-                    <h2 class="text-uppercase">¡Bienvenido <br />{{ $name }}!</h2>
+                    <h2 class="text-uppercase">¡Bienvenido <br /><strong>{{ $name }}</strong>!</h2>
                     <br><br/>
                     <h4>TU REGISTRO HA SIDO EXITOSO</h4>
                 </div>
@@ -99,6 +106,15 @@
 
 </div>
 
+<div class="container-fluid mt-4" >
+    <div class="row">
+        <div class="col-12 text-align">
+            <a href="{{ url('/') }}">
+                <img width="70%" src="{{URL::asset('/images/thumbnail_GWM-hello-tomorrow.png')}}">
+            </a>
+        </div>
+    </div>
+</div>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -108,7 +124,7 @@
     window.setTimeout(function(){
 
         // Move to a new location or you can do something else
-        window.location.href = "https://wedrivetogether.mx/";
+       // window.location.href = "https://wedrivetogether.mx/";
 
     }, 3000);
 </script>

@@ -33,6 +33,9 @@ Route::post('signup',  [AuthController::class, 'signUp']);
 Route::get('/', function () {
     return view('electric.index');
 });
+Route::get('/thanks', function () {
+    return view('electric.thanks', ['name' => 'name']);
+});
 Route::post('signup',  [ElectricController::class, 'signUp']);
 
 
