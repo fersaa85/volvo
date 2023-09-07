@@ -27,7 +27,7 @@
         }
 
         body {
-            background: url({{URL::asset('/images/FHD-fondo.png')}}) no-repeat center center fixed;
+            background: url({{URL::asset('/images/MG-V-1.png')}}) no-repeat center center fixed;
             -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;
@@ -71,8 +71,8 @@
         }
 
         .btn-black{
-            background-color: #000000;
-            border-color: #000000;
+            background-color: #2b394e;
+            border-color: #2b394e;
         }
 
         .alert-success-blue{
@@ -104,7 +104,7 @@
     <div class="row">
         <div class="col-12 text-align">
             <a href="{{ url('/') }}">
-                <img width="70%" src="{{URL::asset('/images/thumbnail_haval-h6-hev.png')}}">
+                <img width="80%" src="{{URL::asset('/images/thumbnail_GWM-hello-tomorrow.png')}}">
             </a>
         </div>
     </div>
@@ -138,8 +138,8 @@
                 <div class="form-group">
                     <input type="text" name="business" class="form-control" placeholder="EMPRESA:">
                 </div><br/>
-                <div class="text-right">
-                    <button type="submit" class="btn btn-primary btn-black font-weight-lighter">ENVIAR</button>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary btn-black font-weight-lighter" style="width: 200px">ENVIAR</button>
 
                 </div>
             </form>
@@ -150,15 +150,7 @@
 
 </div>
 
-<div class="container-fluid mt-4" >
-    <div class="row">
-        <div class="col-12 text-align">
-            <a href="{{ url('/') }}">
-                <img width="70%" src="{{URL::asset('/images/thumbnail_GWM-hello-tomorrow.png')}}">
-            </a>
-        </div>
-    </div>
-</div>
+
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
